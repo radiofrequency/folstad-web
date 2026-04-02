@@ -35,7 +35,7 @@ const stats = [
   { value: '2–5', label: 'Ages' },
   { value: 'EYFS', label: 'Cambridge-Inspired' },
   { value: '฿30k', label: 'Monthly' },
-  { value: 'EYFS', label: 'Cambridge-Inspired' },
+  { value: 'Mon–Fri', label: 'Schedule' },
 ];
 
 const dayPreview = [
