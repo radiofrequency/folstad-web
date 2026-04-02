@@ -123,7 +123,7 @@ export default function Jobs() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 justify-center">
-              {['Small Team', 'Warm Culture', 'Meaningful Work', 'Bangkok Based'].map((tag) => (
+              {['Small Team', 'Warm Culture', 'Meaningful Work', 'Phuket Based'].map((tag) => (
                 <span key={tag} className="px-4 py-2 bg-white/15 rounded-full text-sm font-body font-semibold">
                   {tag}
                 </span>
