@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/daily-log', label: 'Daily Log' },
   { to: '/enrollment', label: 'Enroll' },
   { to: '/jobs', label: 'Jobs' },
+  { to: '/pricing', label: 'Pricing' },
   { to: '/contact', label: 'Contact' },
   { to: '/calendar', label: 'Calendar' },
 ];

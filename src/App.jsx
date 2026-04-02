@@ -10,6 +10,8 @@ import Enrollment from './pages/Enrollment';
 import Jobs from './pages/Jobs';
 import Contact from './pages/Contact';
 import Calendar from './pages/Calendar';
+import Pricing from './pages/Pricing';
+import Comparison from './pages/Comparison';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +36,8 @@ function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/comparison" element={<Comparison />} />
         </Routes>
       </Layout>
     </BrowserRouter>
