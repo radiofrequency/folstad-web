@@ -118,14 +118,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Folstad */}
+      {/* Why Cherngtalay */}
       <section className="section-pad bg-cream">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-sage font-body font-semibold text-sm uppercase tracking-widest mb-3">
               Why Choose Us
             </p>
-            <h2 className="section-heading">The Folstad Difference</h2>
+            <h2 className="section-heading">The Cherngtalay Difference</h2>
             <p className="text-navy/60 mt-4 max-w-xl mx-auto font-body text-base leading-relaxed">
               A thoughtfully designed program where every detail supports your child&apos;s whole development.
             </p>
@@ -223,7 +223,7 @@ export default function Home() {
               A
             </div>
             <div className="text-left">
-              <p className="text-white font-body font-semibold text-sm">A Folstad Family</p>
+              <p className="text-white font-body font-semibold text-sm">A Cherngtalay Family</p>
               <p className="text-white/50 font-body text-xs">Phuket, 2026</p>
             </div>
           </div>

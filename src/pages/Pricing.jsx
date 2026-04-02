@@ -76,7 +76,7 @@ const steps = [
     emoji: '&#127881;',
     number: '4',
     title: 'Welcome',
-    desc: 'Your child joins the Folstad family',
+    desc: 'Your child joins the Cherngtalay family',
   },
 ];
 
@@ -220,7 +220,7 @@ export default function Pricing() {
             </p>
             <h2 className="section-heading mb-3">Enrollment Process</h2>
             <p className="text-navy/60 font-body text-base max-w-xl mx-auto">
-              Four simple steps and your child is part of the Folstad family.
+              Four simple steps and your child is part of the Cherngtalay family.
             </p>
           </div>
 

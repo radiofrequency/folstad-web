@@ -48,7 +48,7 @@ export default function Navbar() {
                 scrolled ? 'text-navy' : 'text-white'
               }`}
             >
-              Folstad Curriculum
+              Cherngtalay Daycare
             </span>
             <span
               className={`text-xs font-body leading-none transition-colors duration-300 ${

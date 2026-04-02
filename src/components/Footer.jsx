@@ -31,7 +31,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center text-navy font-display font-bold text-sm">
                 FC
               </div>
-              <span className="font-display font-semibold text-lg">Folstad Curriculum</span>
+              <span className="font-display font-semibold text-lg">Cherngtalay Daycare</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed font-body">
               Play, Grow, Discover – In English, with Warm Touches of Chinese &amp; Thai
@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-xs font-body">
-            &copy; 2026 Folstad Curriculum. All rights reserved.
+            &copy; 2026 Cherngtalay Daycare. All rights reserved.
           </p>
           <p className="text-white/40 text-xs font-body">
             Cambridge-Inspired · Play-Based · Multilingual

@@ -89,7 +89,7 @@ export default function Program() {
               <h2 className="section-heading mb-6">Play Is the Work of Childhood</h2>
               <div className="flex flex-col gap-4 text-navy/70 font-body leading-relaxed">
                 <p>
-                  At Folstad Curriculum, we believe deeply that children between ages 2 and 5 learn
+                  At Cherngtalay Daycare, we believe deeply that children between ages 2 and 5 learn
                   through doing, exploring, and connecting — not through worksheets or rote memorization.
                 </p>
                 <p>

@@ -183,7 +183,7 @@ export default function Comparison() {
             How We Compare
           </h1>
           <p className="text-white/70 text-lg font-body max-w-2xl mx-auto leading-relaxed">
-            An honest look at Folstad Curriculum alongside Phuket&apos;s top international schools.
+            An honest look at Cherngtalay Daycare alongside Phuket&apos;s top international schools.
           </p>
         </div>
       </section>
@@ -192,7 +192,7 @@ export default function Comparison() {
       <section className="py-14 px-6 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-navy/70 font-body text-base md:text-lg leading-relaxed">
-            Phuket has excellent international schools. Here&apos;s an honest look at how Folstad
+            Phuket has excellent international schools. Here&apos;s an honest look at how Cherngtalay
             Curriculum compares to some of the most popular options — so you can choose what&apos;s
             right for your family.
           </p>
@@ -219,7 +219,7 @@ export default function Comparison() {
                     Feature
                   </th>
                   <th className="px-5 py-4 text-center font-body font-bold text-sm bg-amber-400 text-navy">
-                    Folstad
+                    Cherngtalay
                   </th>
                   <th className="px-5 py-4 text-center font-body font-bold text-sm">HeadStart</th>
                   <th className="px-5 py-4 text-center font-body font-bold text-sm">BISP</th>
@@ -242,7 +242,7 @@ export default function Comparison() {
                     <td className="px-5 py-3.5 font-body text-sm font-semibold text-navy/80 border-r border-navy/10">
                       {row.feature}
                     </td>
-                    {/* Folstad column — highlighted */}
+                    {/* Cherngtalay column — highlighted */}
                     <td className="px-5 py-3.5 text-center bg-amber-50/70 border-r border-amber-100 font-semibold">
                       {row.folstad.startsWith('✅') ? (
                         <span className="inline-flex items-center gap-1 justify-center font-body text-sm">
@@ -277,14 +277,14 @@ export default function Comparison() {
         </div>
       </section>
 
-      {/* Section 3 — The Folstad Advantage */}
+      {/* Section 3 — The Cherngtalay Advantage */}
       <section className="section-pad bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sage font-body font-semibold text-sm uppercase tracking-widest mb-3">
               Why Families Choose Us
             </p>
-            <h2 className="section-heading">The Folstad Advantage</h2>
+            <h2 className="section-heading">The Cherngtalay Advantage</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-7">

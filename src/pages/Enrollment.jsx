@@ -62,7 +62,7 @@ export default function Enrollment() {
             Enrollment
           </p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Join the Folstad Family
+            Join the Cherngtalay Family
           </h1>
           <p className="text-white/70 text-lg font-body max-w-2xl mx-auto leading-relaxed">
             We&apos;d love to welcome your child into our warm, playful community.
@@ -111,7 +111,7 @@ export default function Enrollment() {
                 Application Received!
               </h3>
               <p className="text-navy/60 font-body leading-relaxed">
-                Thank you for your interest in Folstad Curriculum. We&apos;ll review your application
+                Thank you for your interest in Cherngtalay Daycare. We&apos;ll review your application
                 and be in touch within 48 hours to schedule a meet-and-greet.
               </p>
             </div>
@@ -241,7 +241,7 @@ export default function Enrollment() {
                 <div className="flex flex-col gap-4">
                   <div>
                     <label className="block text-xs font-body font-bold text-navy/60 uppercase tracking-wide mb-2">
-                      Why are you interested in Folstad Curriculum? *
+                      Why are you interested in Cherngtalay Daycare? *
                     </label>
                     <textarea
                       name="interest"

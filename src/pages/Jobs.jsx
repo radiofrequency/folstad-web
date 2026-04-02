@@ -114,7 +114,7 @@ function ApplyForm({ job, onClose }) {
           <div className="text-center py-6">
             <span className="text-5xl block mb-4">🎉</span>
             <h3 className="font-display text-2xl font-semibold text-navy mb-2">Application Sent!</h3>
-            <p className="text-navy/60 font-body text-sm">We'll be in touch soon. Thank you for your interest in joining Folstad Curriculum.</p>
+            <p className="text-navy/60 font-body text-sm">We'll be in touch soon. Thank you for your interest in joining Cherngtalay Daycare.</p>
             <button onClick={onClose} className="mt-6 btn-primary">Close</button>
           </div>
         ) : (
@@ -201,7 +201,7 @@ export default function Jobs() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center gap-6 text-white">
             <div className="flex-1 text-center sm:text-left">
-              <h3 className="font-display text-xl font-semibold mb-1">Working at Folstad</h3>
+              <h3 className="font-display text-xl font-semibold mb-1">Working at Cherngtalay</h3>
               <p className="text-white/70 font-body text-sm">
                 Small team. Big purpose. You will be known, appreciated, and trusted.
               </p>

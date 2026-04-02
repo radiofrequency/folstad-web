@@ -89,7 +89,7 @@ export default function DailyLog() {
               <h2 className="section-heading mb-6">Your Window Into Their Day</h2>
               <div className="flex flex-col gap-4 text-navy/70 font-body leading-relaxed">
                 <p>
-                  The Folstad Daily Log is our commitment to transparency and partnership with families.
+                  The Cherngtalay Daily Log is our commitment to transparency and partnership with families.
                   Every afternoon before pickup, your teacher completes a personalized report for your child.
                 </p>
                 <p>
@@ -119,7 +119,7 @@ export default function DailyLog() {
               <div className="flex items-center justify-between mb-5">
                 <div>
                   <h3 className="font-display text-lg font-semibold text-navy">Daily Log</h3>
-                  <p className="text-navy/40 text-sm font-body">Folstad Curriculum</p>
+                  <p className="text-navy/40 text-sm font-body">Cherngtalay Daycare</p>
                 </div>
                 <div className="text-right">
                   <p className="text-xs font-mono text-navy/40">Thursday</p>
