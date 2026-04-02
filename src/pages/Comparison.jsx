@@ -4,7 +4,7 @@ const tableRows = [
   {
     feature: 'Monthly Tuition',
     folstad: '฿30,000',
-    headstart: '~฿28,900',
+    headstart: '~฿40,000',
     bisp: '~฿35,000',
     uwc: '~฿41,400',
     finnway: '~฿22,000',
