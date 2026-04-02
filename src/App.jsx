@@ -9,6 +9,7 @@ import DailyLog from './pages/DailyLog';
 import Enrollment from './pages/Enrollment';
 import Jobs from './pages/Jobs';
 import Contact from './pages/Contact';
+import Calendar from './pages/Calendar';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ function App() {
           <Route path="/enrollment" element={<Enrollment />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/calendar" element={<Calendar />} />
         </Routes>
       </Layout>
     </BrowserRouter>

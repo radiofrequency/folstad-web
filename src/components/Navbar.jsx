@@ -10,6 +10,7 @@ const navLinks = [
   { to: '/enrollment', label: 'Enroll' },
   { to: '/jobs', label: 'Jobs' },
   { to: '/contact', label: 'Contact' },
+  { to: '/calendar', label: 'Calendar' },
 ];
 
 export default function Navbar() {
