@@ -37,10 +37,10 @@ export default function Enrollment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const text = `🎒 New Enrollment Application\n\nChild: ${form.childName} (DOB: ${form.dob})\nParent 1: ${form.parentName1}\nParent 2: ${form.parentName2 || 'N/A'}\nEmail: ${form.email}\nPhone: ${form.phone}\nLanguages at home: ${form.languages || 'N/A'}\nWhy interested: ${form.interest || 'N/A'}\nSpecial considerations: ${form.considerations || 'N/A'}`;
-    await fetch(`https://api.telegram.org/bot8740238835:AAELxm2JCLcnkMf1qyXTk_yq6ZwV05eLNj8/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot${import.meta.env.VITE_TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: 241746889, text }),
+      body: JSON.stringify({ chat_id: import.meta.env.VITE_TELEGRAM_CHAT_ID, text }),
     });
     setSubmitted(true);
   };

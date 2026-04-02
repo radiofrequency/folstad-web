@@ -9,10 +9,10 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const text = `📬 New Contact Form\n\nName: ${form.name}\nEmail: ${form.email}\nSubject: ${form.subject || 'N/A'}\nMessage: ${form.message}`;
-    await fetch(`https://api.telegram.org/bot8740238835:AAELxm2JCLcnkMf1qyXTk_yq6ZwV05eLNj8/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot${import.meta.env.VITE_TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: 241746889, text }),
+      body: JSON.stringify({ chat_id: import.meta.env.VITE_TELEGRAM_CHAT_ID, text }),
     });
     setSubmitted(true);
   };
