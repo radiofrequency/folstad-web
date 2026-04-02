@@ -20,7 +20,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/folstad-web">
       <ScrollToTop />
       <Layout>
         <Routes>
