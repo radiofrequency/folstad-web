@@ -7,7 +7,7 @@ const tableRows = [
     headstart: '~฿40,000',
     bisp: '~฿35,000',
     uwc: '~฿41,400',
-    finnway: '~฿22,000',
+    finnway: '~฿24,600',
     highlight: false,
   },
   {
@@ -16,7 +16,7 @@ const tableRows = [
     headstart: '฿175,000+',
     bisp: '฿200,000+',
     uwc: '฿265,000+',
-    finnway: '฿50,000+',
+    finnway: '฿62,000 + ฿40,000 deposit',
     highlight: true,
   },
   {
