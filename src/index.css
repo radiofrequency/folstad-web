@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFAF6;
+    color: #1E3A5F;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3 bg-amber-400 text-navy font-bold rounded-full shadow-md hover:bg-amber-300 hover:shadow-lg transition-all duration-200 text-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-7 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-navy transition-all duration-200 text-sm;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-navy text-navy font-bold rounded-full hover:bg-navy hover:text-white transition-all duration-200 text-sm;
+  }
+
+  .btn-sage {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-sage text-white font-bold rounded-full shadow hover:bg-sage-dark transition-all duration-200 text-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden;
+  }
+
+  .section-pad {
+    @apply py-20 px-6;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl md:text-4xl font-semibold text-navy leading-tight;
+  }
+
+  .page-hero {
+    @apply relative overflow-hidden py-24 px-6 text-white;
+    background: linear-gradient(135deg, #1E3A5F 0%, #2A5080 60%, #1E3A5F 100%);
+  }
+}
+
+/* Dot grid background */
+.bg-dots {
+  background-image: radial-gradient(circle, #c8d4e0 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FDFAF6; }
+::-webkit-scrollbar-thumb { background: #6B9E78; border-radius: 3px; }
