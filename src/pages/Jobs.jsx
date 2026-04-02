@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const jobs = [
   {
     title: 'English Lead Teacher',
@@ -7,8 +9,6 @@ const jobs = [
     topBar: 'bg-blue-500',
     tagBg: 'bg-blue-100 text-blue-700',
     pdfFile: '08_job_posting_english_teacher.pdf',
-    mailSubject: 'English Lead Teacher Application – Folstad Curriculum',
-    summary: 'We are seeking a warm, creative, and experienced early childhood educator to serve as our full-time English Lead Teacher. You will be the heart of our daily program — designing activities, building relationships with families, and creating a language-rich environment for our incredible 2–5 year olds.',
     responsibilities: [
       'Plan and deliver daily Cambridge EYFS-aligned activities',
       'Create a rich English language environment through books, songs, and conversation',
@@ -28,6 +28,7 @@ const jobs = [
     ],
     hours: 'Monday – Friday · 7:30 AM – 5:30 PM',
     location: '98 Supalai Hills, Phuket, Thailand',
+    summary: 'We are seeking a warm, creative, and experienced early childhood educator to serve as our full-time English Lead Teacher. You will be the heart of our daily program — designing activities, building relationships with families, and creating a language-rich environment for our incredible 2–5 year olds.',
   },
   {
     title: 'Chinese Language Visitor',
@@ -37,8 +38,6 @@ const jobs = [
     topBar: 'bg-red-500',
     tagBg: 'bg-red-100 text-red-700',
     pdfFile: '09_job_posting_chinese_visitor.pdf',
-    mailSubject: 'Chinese Language Visitor Application – Folstad Curriculum',
-    summary: 'We are looking for a warm and engaging Mandarin Chinese speaker to join us once a week as our Chinese Language Visitor. Your sessions bring the joy of Mandarin to young children through songs, stories, games, and cultural activities aligned to our weekly theme.',
     responsibilities: [
       'Deliver one weekly 45–60 minute language session in Mandarin',
       'Prepare songs, vocabulary activities, and culturally rich content',
@@ -55,6 +54,7 @@ const jobs = [
     ],
     hours: 'One afternoon per week · Approx. 1–2 hours',
     location: '98 Supalai Hills, Phuket, Thailand',
+    summary: 'We are looking for a warm and engaging Mandarin Chinese speaker to join us once a week as our Chinese Language Visitor. Your sessions bring the joy of Mandarin to young children through songs, stories, games, and cultural activities aligned to our weekly theme.',
   },
   {
     title: 'Thai Language Visitor',
@@ -64,8 +64,6 @@ const jobs = [
     topBar: 'bg-green-600',
     tagBg: 'bg-green-100 text-green-700',
     pdfFile: '10_job_posting_thai_visitor.pdf',
-    mailSubject: 'Thai Language Visitor Application – Folstad Curriculum',
-    summary: 'We are seeking a warm Thai language speaker to join our program weekly as our Thai Language Visitor. You will help our youngest learners discover the beauty of Thai through songs, greetings, stories, and cultural celebrations — creating genuine multilingual joy.',
     responsibilities: [
       'Deliver one weekly 45–60 minute language session in Thai',
       'Introduce Thai vocabulary, songs, and greetings suited to ages 2–5',
@@ -82,12 +80,98 @@ const jobs = [
     ],
     hours: 'One afternoon per week · Approx. 1–2 hours',
     location: '98 Supalai Hills, Phuket, Thailand',
+    summary: 'We are seeking a warm Thai language speaker to join our program weekly as our Thai Language Visitor. You will help our youngest learners discover the beauty of Thai through songs, greetings, stories, and cultural celebrations — creating genuine multilingual joy.',
   },
 ];
 
+function ApplyForm({ job, onClose }) {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const text = `💼 New Job Application — ${job.title}\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || 'N/A'}\nMessage: ${form.message || 'N/A'}`;
+    await fetch(`https://api.telegram.org/bot${import.meta.env.VITE_TELEGRAM_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: import.meta.env.VITE_TELEGRAM_CHAT_ID, text }),
+    });
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 relative">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-navy/10 text-navy hover:bg-navy/20 transition-colors font-body font-bold text-sm"
+        >
+          ✕
+        </button>
+        {submitted ? (
+          <div className="text-center py-6">
+            <span className="text-5xl block mb-4">🎉</span>
+            <h3 className="font-display text-2xl font-semibold text-navy mb-2">Application Sent!</h3>
+            <p className="text-navy/60 font-body text-sm">We'll be in touch soon. Thank you for your interest in joining Folstad Curriculum.</p>
+            <button onClick={onClose} className="mt-6 btn-primary">Close</button>
+          </div>
+        ) : (
+          <>
+            <h3 className="font-display text-xl font-semibold text-navy mb-1">Apply — {job.title}</h3>
+            <p className="text-navy/50 font-body text-sm mb-6">We'll be in touch within 48 hours.</p>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <div>
+                <label className="block text-xs font-body font-bold text-navy/50 uppercase tracking-wide mb-1">Full Name *</label>
+                <input
+                  type="text" name="name" required value={form.name} onChange={handleChange}
+                  className="w-full px-4 py-3 border border-navy/20 rounded-xl font-body text-navy text-sm focus:outline-none focus:ring-2 focus:ring-sage"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-body font-bold text-navy/50 uppercase tracking-wide mb-1">Email *</label>
+                <input
+                  type="email" name="email" required value={form.email} onChange={handleChange}
+                  className="w-full px-4 py-3 border border-navy/20 rounded-xl font-body text-navy text-sm focus:outline-none focus:ring-2 focus:ring-sage"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-body font-bold text-navy/50 uppercase tracking-wide mb-1">Phone / WhatsApp</label>
+                <input
+                  type="text" name="phone" value={form.phone} onChange={handleChange}
+                  className="w-full px-4 py-3 border border-navy/20 rounded-xl font-body text-navy text-sm focus:outline-none focus:ring-2 focus:ring-sage"
+                  placeholder="+66..."
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-body font-bold text-navy/50 uppercase tracking-wide mb-1">Tell us about yourself</label>
+                <textarea
+                  name="message" rows={4} value={form.message} onChange={handleChange}
+                  className="w-full px-4 py-3 border border-navy/20 rounded-xl font-body text-navy text-sm focus:outline-none focus:ring-2 focus:ring-sage resize-none"
+                  placeholder="Brief intro, experience, availability..."
+                />
+              </div>
+              <button type="submit" className="btn-primary w-full py-4">
+                Send Application &#8594;
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function Jobs() {
+  const [activeForm, setActiveForm] = useState(null);
+
   return (
     <>
+      {activeForm && <ApplyForm job={activeForm} onClose={() => setActiveForm(null)} />}
+
       {/* Page Hero */}
       <section className="page-hero">
         <div
@@ -160,12 +244,12 @@ export default function Jobs() {
                       >
                         &#128196; Job PDF
                       </a>
-                      <a
-                        href={`mailto:jobs@folstadcurriculum.com?subject=${encodeURIComponent(job.mailSubject)}`}
+                      <button
+                        onClick={() => setActiveForm(job)}
                         className="btn-primary"
                       >
                         Apply Now &#8594;
-                      </a>
+                      </button>
                     </div>
                   </div>
 
@@ -230,10 +314,7 @@ export default function Jobs() {
           <p className="text-white/60 font-body mb-6">
             We are happy to answer any questions about our positions, schedule, or expectations.
           </p>
-          <a
-            href="mailto:jobs@folstadcurriculum.com"
-            className="btn-primary"
-          >
+          <a href="mailto:jobs@folstadcurriculum.com" className="btn-primary">
             &#9993; Email Us
           </a>
         </div>
