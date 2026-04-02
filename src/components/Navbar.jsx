@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-navy font-display font-bold text-base shadow-sm group-hover:scale-105 transition-transform">
-            FC
+            CD
           </div>
           <div>
             <span

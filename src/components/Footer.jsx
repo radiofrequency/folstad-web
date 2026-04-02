@@ -29,7 +29,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center text-navy font-display font-bold text-sm">
-                FC
+                CD
               </div>
               <span className="font-display font-semibold text-lg">Cherngtalay Daycare</span>
             </div>
