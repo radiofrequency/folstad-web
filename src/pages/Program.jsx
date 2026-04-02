@@ -250,7 +250,7 @@ export default function Program() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="/pdfs/00_program_overview.pdf"
+              href={`${import.meta.env.BASE_URL}pdfs/00_program_overview.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

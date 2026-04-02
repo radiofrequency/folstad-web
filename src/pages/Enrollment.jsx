@@ -295,7 +295,7 @@ export default function Enrollment() {
             {docs.map(({ name, file, desc }) => (
               <a
                 key={file}
-                href={`/pdfs/${file}`}
+                href={`${import.meta.env.BASE_URL}pdfs/${file}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card border border-navy/8 p-5 hover:-translate-y-1 group"

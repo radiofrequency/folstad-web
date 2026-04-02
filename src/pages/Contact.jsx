@@ -105,7 +105,7 @@ export default function Contact() {
                 <h4 className="font-display font-semibold text-navy text-sm mb-3">Quick Links</h4>
                 <div className="flex flex-col gap-2">
                   <a
-                    href="/pdfs/05_parent_welcome_letter.pdf"
+                    href={`${import.meta.env.BASE_URL}pdfs/05_parent_welcome_letter.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-body text-navy/70 hover:text-sage transition-colors"
@@ -113,7 +113,7 @@ export default function Contact() {
                     &#128196; Parent Welcome Letter
                   </a>
                   <a
-                    href="/pdfs/00_program_overview.pdf"
+                    href={`${import.meta.env.BASE_URL}pdfs/00_program_overview.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-body text-navy/70 hover:text-sage transition-colors"
@@ -121,7 +121,7 @@ export default function Contact() {
                     &#128196; Program Overview PDF
                   </a>
                   <a
-                    href="/pdfs/11_enrollment_application.pdf"
+                    href={`${import.meta.env.BASE_URL}pdfs/11_enrollment_application.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-body text-navy/70 hover:text-sage transition-colors"

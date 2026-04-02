@@ -200,7 +200,7 @@ export default function DailyLog() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="/pdfs/03_daily_log.pdf"
+                href={`${import.meta.env.BASE_URL}pdfs/03_daily_log.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
@@ -208,7 +208,7 @@ export default function DailyLog() {
                 &#128196; Download Daily Log PDF
               </a>
               <a
-                href="/pdfs/04_weekly_summary.pdf"
+                href={`${import.meta.env.BASE_URL}pdfs/04_weekly_summary.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3 border-2 border-white/40 text-white/80 font-bold rounded-full hover:bg-white/10 transition-all duration-200 text-sm font-body"

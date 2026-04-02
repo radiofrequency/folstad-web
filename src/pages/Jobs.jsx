@@ -153,7 +153,7 @@ export default function Jobs() {
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <a
-                        href={`/pdfs/${job.pdfFile}`}
+                        href={`${import.meta.env.BASE_URL}pdfs/${job.pdfFile}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-4 py-2 border border-navy/20 text-navy/70 rounded-full text-sm font-body font-semibold hover:border-navy hover:text-navy transition-all"

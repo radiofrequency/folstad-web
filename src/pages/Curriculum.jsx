@@ -278,7 +278,7 @@ export default function Curriculum() {
             Get the complete curriculum overview including week-by-week activities and language focus areas.
           </p>
           <a
-            href="/pdfs/02_curriculum_4week_plan.pdf"
+            href={`${import.meta.env.BASE_URL}pdfs/02_curriculum_4week_plan.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

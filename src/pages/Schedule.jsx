@@ -222,7 +222,7 @@ export default function Schedule() {
             Download the Full Schedule
           </h3>
           <a
-            href="/pdfs/01_daily_schedule.pdf"
+            href={`${import.meta.env.BASE_URL}pdfs/01_daily_schedule.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
